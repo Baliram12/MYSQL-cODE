@@ -1,0 +1,15 @@
+show databases;
+use accuknox;
+SELECT * FROM agents_onboarding;
+INSERT INTO agents_onboarding (id, name, archived , description , created_at , update_at)
+VALUES ('1', 'testdemo', '1', 'des', '2021-01-01 00:00:01', '2021-01-01 00:00:01');
+DELETE FROM agents_onboarding WHERE accuknox;
+DROP TABLE agents_onboarding ;
+CREATE TABLE agents_onboarding (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    archived    BOOLEAN,
+    description VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+     update_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
